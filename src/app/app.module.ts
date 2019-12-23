@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthGuard } from './services';
 import { ComponentModule } from './components/components.module';
 import { HttpClientModule } from '@angular/common/http'; 
+import { CommitsService } from './services/commits.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     ComponentModule,
     HttpClientModule
   ],
-  providers: [AuthGuard  ],
+  providers: [AuthGuard  , CommitsService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
